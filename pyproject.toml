@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "m3u-tools"
+version = "0.1.0"
+description = "Command line tool to manage m3u playlists."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "click>=8.0"
+]
+
+[project.scripts]
+m3u-tools = "m3u_tools.cli:cli"

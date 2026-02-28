@@ -1,0 +1,14 @@
+# Virtual environments
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# OS
+.DS_Store
