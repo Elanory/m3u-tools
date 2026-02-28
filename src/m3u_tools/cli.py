@@ -29,8 +29,10 @@ def export(file, export_path, absolute, flatten_m3u, flatten_dir):
     path = Path(export_path)
 
     if path.is_dir(): path = path / "playlist.m3u"
-    elif path.suffix != ".m3u" or path.suffix != ".m3u8":
+    elif path.suffix not in (".m3u", ".m3u8"):
         path = path.with_suffix(".m3u")
+
+    open(path, 'a').close()
 
     root = Node(Path(file))
     root.load()
